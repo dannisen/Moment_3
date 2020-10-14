@@ -1,0 +1,42 @@
+// Variabler
+$font-stack: 'Montserrat', Arial;
+$lightbeige: #fffefc;
+$blue: #133241;
+$lightblue: lighten($blue, 10);
+$darkblue: darken($blue, 10);
+$darkerblue: darken($blue, 20);
+$pink: #CD6799;
+$turqoise: #4d7373;
+$lightturqoise: lighten($turqoise, 30);
+$brightturqoise: saturate($turqoise, 20);
+$white: #fff;
+$grey: #f0f0f0;
+$darkgrey: darken($grey, 10);
+$darkergrey: darken($grey, 60);
+$areas: 'header header header''navigation navigation navigation''section section section''footer footer footer';
+
+// Mixins
+@mixin medium {
+    @media (max-width: 900px) { @content;}
+}
+
+@mixin small {
+    @media (max-width: 600px) { @content;}
+}
+
+@mixin div ($main:true) {
+    @if $main {
+        background-color: $grey;
+        color: $darkergrey;
+        padding: 5%;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        border-left: 7px solid $darkgrey;
+        
+        h3 {
+            color: $darkblue;
+        }
+        } @else {
+            margin-top: 40px;
+        }
+    }
